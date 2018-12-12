@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Dark Mode Exsample</title>
+	
+	<style>
+	body {
+		font-family: -apple-system;
+		color: #000000;
+		text-align: left;
+		margin: 5%;
+	}
+	
+	#content {
+		width: 70%;
+		float: left;
+	}
+	
+	#menu {
+		width: 30%;
+		margin-left: 70%;
+		padding-top: 50px;
+	}
+	
+	#head {
+		border-bottom: solid 1px #777777;
+		margin: 0%;
+		padding-bottom: 30px;
+	}
+	
+	img {
+		margin: 0% 5% 0% 5%;
+		width: 90%;
+	}
+	
+	h1 {
+		font-size: 200%;
+		margin:5px 0% 0% 0%;
+	}
+
+	h2 {
+		font-size: 160%;		
+	}
+
+	h3 {
+		font: 500 130% -apple-system;
+		color: #444444;
+		margin: 1em 0% 0% 0%;
+	}
+
+	h5 {
+		font-weight: 600;
+		font-size: 120%;
+		color: #555555;
+		margin:0%;
+	}
+	
+	h6 {
+		font-weight: 200;
+		font-size: 100%;
+		color: #393939;
+		margin: 30px 0% 10px 0%;
+	}
+
+	p, ul {
+		font-weight: 100;
+		font-size: 100%;
+		color: #393939;
+	}		
+	
+	li {
+		margin: 5px 0px;
+	}
+	
+	ul.menuList {
+		list-style-type: none;
+	}
+
+	ul.menuList li {
+		margin: 0% 0% 5px 0%;
+		font-size: 80%;
+	}
+
+	.coding {
+		font: 400 85% menlo;
+		border: solid 1px #DDDDDD;
+		border-radius: 8px;
+		background-color: #F7F7F7;
+		margin: 0%;
+		padding: 0em 2em;
+	}
+
+	.note {
+		border: solid 1px #EEEEEE;
+		border-left: solid 8px #E0E0E0;
+		border-radius: 8px;
+		background-color: #F9F9F9;
+		margin: 0%;
+		padding: 0em 2em 0em 1em;
+	}
+	
+	.important {
+		border: solid 1px #FFFEEE;
+		border-left: solid 8px #FFEA1E;
+		border-radius: 8px;
+		background-color: #FAF7E2;
+		margin: 0%;
+		padding: 0em 2em 0em 1em;
+	}
+
+	span {
+		font-family: "Menlo";
+		font-size: 93%;		
+	}
+	
+	.classRefer {
+		color: #4487EE;
+	}
+	
+	.code01 {
+		color: #DD66DD;
+	}
+	
+	.code02 {
+		color: #8866EE;
+	}
+	
+	.code03 {
+		color: #EE5555;
+	}
+	
+	a:link, a:visited {
+		text-decoration: none;
+		color : #44AAEE;
+	}
+	
+	a:hover {
+		text-decoration-line: underline;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		body {
+			background-color: #222222;
+			color: #FFFFFF;
+		}
+		
+		#head {
+			border-bottom: solid 1px #888888;
+		}
+		
+		h1, h2, h3, h6 {
+			color: #FFFFFF;
+			text-shadow: 0px 0px 1px #DDDDDD;
+		}
+				
+		h5 {
+			color: #AAAAAA;
+		}
+		
+		p, ul {
+			color: #E9E9E9;
+		}
+		
+		.classRefer {
+			color: #FFBB88;
+		}
+		
+		a {
+			text-shadow: 0px 0px 1px #AADDFF;
+		}
+		
+		.coding {
+			background-color: #343434;
+			border-color: #444444;
+		}
+		
+		.note {
+			background-color: #343434;
+			border-color: #444444;
+			border-left: solid 8px #666666;
+		}
+
+		.important {
+			background-color: #705911;
+			border-color: #665511;
+			border-left: solid 8px #A08822;
+		}
+		
+		.code01 {
+			color: #FFAAFF;
+		}
+	
+		.code02 {
+			color: #FBBA86;
+		}
+	
+		.code03 {
+			color: #E98940;
+		}
+	}	
+
+		</style>
+	
+</head>
+<body id="" onload="">
+<div id="content">
+		<div id="head">	
+			<h5>Command+Eye 05</h5>	
+			<h1>Supporting Dark Mode in Your Interface</h1>	
+			<p>Adopt a dark appearance in addition to the standard light appearance.</p>
+		</div>
+
+		<div id="overview">
+			<h2>Overview</h2>
+			<p>In macOS 10.14, users can choose to adopt a system-wide light or dark appearance. The light appearance derives from the original Aqua interface of macOS. The dark appearance, known as Dark Mode, is a system-wide implementation of an appearance that many apps already adopt. </p>
+			<img src="img/figure1.png">
+			<p>The choice of whether to enable a light or dark appearance is an aesthetic one for most users, and might not relate to ambient lighting conditions. Apps should support both appearances, but there may be reasons to support one appearance over another. For example, even in Dark Mode, you may want to adopt a light background for printed content.</p>
+			<p>Before making any changes to your app, always turn on Dark Mode and see how your app responds. AppKit does a lot of work for you, such as automatically updating standard views and controls to match the system appearance. For custom views, there are ways to implement your views that allow them to adapt naturally to both light and dark appearances as well. For example, if you use the recommended AppKit colors, those colors update automatically. If you hard-code colors and images in your custom views, you’ll need to make changes to support both light and dark appearances.</p>
+			<img src="img/figure2.png">	
+		</div>
+
+		<div id="chooseColorsThatAdapt">
+			<h2>Choose Colors that Adapt</h2>
+			<p>The light and dark appearances use very different color palettes. If your app uses hard-coded color values, those values may be inappropriate when switching to a dark appearance. However, there are two simple ways to address color issues:</p>
+			<ul>
+				<li>Use a semantic color defined by the <span class="classRefer">NSColor</span> class. Semantic colors let you specify colors based on their intended usage, rather than on the actual color. Examples include <span class="classRefer">labelColor</span>, <span class="classRefer">controlColor</span>, and <span class="classRefer">controlBackgroundColor</span>. For a complete list, see <span class="classRefer">NSColor</span>.</li>
+				<li>Add custom colors to your asset catalog.</li>
+			</ul>
+			<p>Use semantic colors when mixing your custom views and controls with standard AppKit views. Semantic colors ensure that your custom views have a similar appearance to the other views in your interface.</p>
+			<p>When you can’t use a semantic color, specify your color in an asset catalog. Use the appearance pop-up menu to configure whether your Color Set asset has custom slots for light and dark appearances. Colors in the Light Appearance and Dark Appearance slots are available only on macOS 10.14 and later. To specify the color for earlier versions of macOS, use the Any Appearance slot.</p>
+			<img src="img/figure3.png">	
+			<p>To load a color value from an asset catalog, use code like:</p>
+			<div class="coding">
+				<p><span class="code01">let</span> aColor = <span class="code02">NSColor</span>(named: <span class="code02">NSColor.Name</span>(<span  class="code03">"customControlColor"</span>))</p>
+			</div>	
+			<p>You do not have to recreate asset-based color objects when the current appearance changes. Each time you set the fill or stroke color for drawing, <span class="classRefer">NSColor</span> applies the appropriate color value from the asset catalog. Similarly, you do not need to recreate any of the predefined color objects that AppKit provides, such as <span class="classRefer">labelColor</span>. However, you do need to recreate color objects containing hard-coded component values, if those colors would be affected by appearance changes.</p>
+			<div class="note">
+				<h3>Note</h3>
+				<p>For the user's content, always preserve colors that the user explicitly chooses. For example, a painting app should not try to change colors that the user applies to their canvas. Adaptable colors are intended primarily for the chrome of your app's custom views and controls.</p>
+			</div>
+		</div>
+		
+		<div id="createImagesForDarkAppearances">
+			<h2>Create Images for Dark Appearances</h2>
+			<p>Check the images in your interface to make sure they look good in both light and dark appearances. You can include images in buttons, image views, or custom views and controls. If an image is difficult to see when changing appearances, provide a new image asset that looks good in the other appearance.</p>
+			<p>For information on how to configure images for both light and dark interfaces, see <a href="https://developer.apple.com/documentation/appkit/images_and_pdf/providing_images_for_different_appearances">Providing Images for Different Appearances</a>.</p>
+		</div>
+		
+		<div id="updateCustomViewsUsingEstablishedMethods">
+			<h2>Update Custom Views Using Established Methods</h2>
+			<p>When the current appearance changes, AppKit automatically asks each window and view to redraw itself. For custom views, AppKit calls one or more of the following methods:</p>
+			<ul>
+				<li><span class="classRefer">updateLayer()</span></li>
+				<li><span class="classRefer">draw(_:)</span></li>
+				<li><span class="classRefer">layout()</span></li>
+				<li><span class="classRefer">updateConstraints()</span></li>
+			</ul>
+			<p>As long as you update your view from one of these methods, your view will have a chance to update itself when the appearance changes. Be aware that you might need to perform tasks in these methods that you might have previously performed elsewhere. For example, instead of setting the background color of your view’s layer at creation time, you now need to put that code in your view’s <span class="classRefer">updateLayer()</span> method, as shown in Listing 2. Although the <span class="classRefer">NSColor</span> object in the following example updates automatically, the background color of the layer does not. As a result, you need to assign an updated <span class="classRefer">CGColor</span> explicitly.</p>
+		</div>
+		
+		<div id="chooseVisualEffectMaterialsBasedOnTheIntendedUsage">
+			<h2>Choose Visual Effect Materials Based on the Intended Usage</h2>
+			<p>You use <span class="classRefer">NSVisualEffectView</span> objects to give depth to your interface. Typically, you use a visual effect view as a background view, placing other content such as labels and controls inside it. You also choose a material for your visual effect view. Materials determine the amount of translucency and blending imparted by the visual effect view onto your content.</p>
+			<p>Always choose materials based on their defined usage, not based on how those materials look. For example, when using a visual effect view as the background of a popover, choose the <span class="classRefer">NSVisualEffectView.Material.popover</span> material. Materials adapt automatically to the system appearance, including light and dark changes. You do not have to change materials manually.</p>
+			<div class="important">
+				<h3>Important</h3>
+				<p>Do not use the <span class="classRefer">NSVisualEffectView.Material.light</span>, <span class="classRefer">NSVisualEffectView.Material.dark</span>, <span class="classRefer">NSVisualEffectView.Material.mediumLight</span>, or <span class="classRefer">NSVisualEffectView.Material.ultraDark</span> materials in macOS 10.14 and later. These materials do not change to match the system appearance and their use is deprecated.</p>
+			</div>
+			<p>For more information about using visual effect views in your interface, see <span class="classRefer">NSVisualEffectView</span>.</p>
+		</div>
+		
+		<div id="optOutWhenAppropriate">
+			<h2>Opt Out When Appropriate</h2>
+			<p>Whether you adopt both light and dark appearances is an aesthetic choice; however, you are encouraged to support both. If your design requires opting out of one appearance, you can tell AppKit which appearance you want to use. For example, you might adopt a dark appearance for your app at all times because it highlights your content better. You might also adopt a light appearance for user documents or printable content.</p>
+			<p>You can configure all or part of your interface to opt out of a specific appearance. You can also adopt a specific appearance for your entire app. For more information about how to make these changes, see <a href="https://developer.apple.com/documentation/appkit/nsappearancecustomization/choosing_a_specific_appearance_for_your_app">Choosing a Specific Appearance for Your App</a>.</p>
+		</div>
+</div>
+<div id="menu">
+	<ul class="menuList">
+		<h6>FrameWork</h6>
+		<li>AppKit</li>
+		<h6>On This Page</h6>
+		<li><a href=#overview>Overview</a></li>
+		<li><a href=#chooseColorsThatAdapt>Choose Colors that Adapt</a></li>
+		<li><a href=#createImagesForDarkAppearances>Create Images for Dark Appearances</a></li>
+		<li><a href=#updateCustomViewsUsingEstablishedMethods>Update Custom Views Using Established Methods</a></li>
+		<li><a href=#chooseVisualEffectMaterialsBasedOnTheIntendedUsage>Choose Visual Effect Materials Based on the Intended Usage</a></li>
+		<li><a href=#optOutWhenAppropriate>Opt Out When Appropriate</a></li>
+	</ul>
+</div>
+</body>
